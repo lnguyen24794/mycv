@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+@keyframes showImg{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes onLoad {
+	from {
+		background: #FFF;
+	}
+	to {
+		background: $bg-color;
+	}
+}
+
+.loader {
+	text-align: center;
+	justify-content: center;
+    align-items: center;
+    position: fixed;
+	left: 0px;
+	background: #FFF;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+	z-index: 9999;
+	.container {
+		height: 64px;
+        position: relative;
+        img{
+            animation: showImg 1s ease;
+        }
+		.name {	
+			margin-bottom: 10px;
+			position: relative;
+			height: 60px;
+			overflow: hidden;
+			
+			@keyframes loadName {
+				from {
+					transform: translateY(64px);
+				}
+				to {
+					transform: translateY(0px);
+				}
+			}
+						
+			span {
+                display: inline-block;
+                
+				font-size: $text-size;
+				color: $text-color;
+				transform: translateY(64px);
+				
+				&:nth-child(1) {
+					animation: loadName 0.5s ease 1s forwards;
+				}
+				&:nth-child(2) {
+					animation: loadName 0.5s ease 1.2s forwards;
+				}
+				&:nth-child(3) {
+					animation: loadName 0.5s ease 1.4s forwards;
+				}
+				&:nth-child(4) {
+					animation: loadName 0.5s ease 1.6s forwards;
+                }
+                &:nth-child(5) {
+					animation: loadName 0.5s ease 1.8s forwards;
+				}
+				&:nth-child(6) {
+					animation: loadName 0.5s ease 2s forwards;
+				}
+				&:nth-child(7) {
+					animation: loadName 0.5s ease 2.2s forwards;
+				}
+				&:nth-child(8) {
+					animation: loadName 0.5s ease 2.4s forwards;
+                }
+                &:nth-child(9) {
+					animation: loadName 0.5s ease 2.6s forwards;
+                }
+                &:nth-child(10) {
+					animation: loadName 0.5s ease 2.8s forwards;
+                }
+                
+			}
+		}
+		
+		@keyframes loadLine {
+			from {
+				width: 0%;
+			}
+			to {
+                width: 100%;
+                background: #ff724c;
+			}
+		}
+		
+		.line {
+			height: $line-height;
+			background: $line-color;
+			width: 0%;
+			border-radius: 50px;
+			animation: loadLine 0.8s ease 2.2s forwards
+		}
+		
+		@keyframes fadeSubIn {
+			from {
+				opacity: 0;
+			}
+			to {
+				opacity: 1;
+			}
+		}
+		
+		.sub {
+			margin-top: 15px;
+			
+			p {
+				opacity: 0;
+				color: $sub-text-color;
+				letter-spacing: 4px;
+				animation: fadeSubIn 1s ease 2.4s forwards;
+			}
+		}
+	}
+}
