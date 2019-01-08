@@ -22,7 +22,9 @@
     setTimeout(function(){
         var ele = document.getElementById("loader");
         ele.style.opacity=0;
-        ele.style.display="none";
+        setTimeout(function(){
+            ele.style.display='none';
+        },300)
     },3500)
     export default {
        computed:{

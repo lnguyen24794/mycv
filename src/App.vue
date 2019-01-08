@@ -1,13 +1,19 @@
 <template>
-  <div id="app">
+  <div id="app" >
+
     <router-view/>
   </div>
 </template>
 
 <script>
-
+ // import AppLoader from "../components/Loader"
 export default {
   name: 'App',
+  components:{
+     // AppLoader,
+  }
+        
+  
 }
 </script>
 <style lang="scss">
