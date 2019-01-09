@@ -11,30 +11,31 @@ export default new Router({
     {
       path: '/',
       name: 'page',
-      component:()=> import('./views/home/index'),
+      redirect: {name:'home'},
+      component: ()=> import('./views/home/index'),
       children:[
         {
-          path:"#home",
+          path:"/home",
           name:"home",
           component:()=> import('./views/home/home')
         },
         {
-          path:"#aboutme",
+          path:"/aboutme",
           name:"aboutme",
           component:()=> import('./views/home/aboutme')
         },
         {
-          path:"#resume",
+          path:"/resume",
           name:"resume",
           component:()=> import('./views/home/resume')
         },
         {
-          path:"#portfolio",
+          path:"/portfolio",
           name:"portfolio",
           component:()=> import('./views/home/portfolio')
         },
         {
-          path:"#contact",
+          path:"/contact",
           name:"contact",
           component:()=> import('./views/home/contact')
         }
