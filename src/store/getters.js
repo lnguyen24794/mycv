@@ -3,7 +3,4 @@ export const value = state => {
 };
 export const nickName=state=>{
 	return state.nickName;
-};
-export const editorData=state=>{
-	return state.editorData;
 }

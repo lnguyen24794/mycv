@@ -11,8 +11,7 @@ Vue.use(Vuex)
 export const store = new Vuex.Store({
 	state: {
     value: "",
-	nickName:["L","Â","M","-","N","G","U","Y","Ễ","N"],
-	editorData:"Lam dep trai"
+    nickName:["L","Â","M","-","N","G","U","Y","Ễ","N"],
 	},
 	getters,
 	mutations,
