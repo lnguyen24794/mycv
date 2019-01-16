@@ -102,6 +102,39 @@ body {
         overflow-y: scroll;
         overflow-x:hidden;
         /* width */
+        .main{
+            .r-title{
+                text-align: center;
+                .title{
+                    display:inline-block;
+                    padding:10px;
+                    h1{
+                        text-align: center;
+                        display: block;
+                        width: 100%;
+                        position: relative;
+                        margin: 12px 0 0;
+                        font-size: 60px;
+                        line-height: 1.1em;
+                        color: #eee;
+                        z-index: 1;
+                    }
+                    h3{
+                        text-align: center;
+                        display: inline-block;
+                        margin: 0;
+                        color: #fff;
+                        background-color: $blue;
+                        padding: 0 10px;
+                        font-size: 14px;
+                        font-weight: 200;
+                        z-index: 2;
+                    }
+                }
+               
+                
+            }
+        }
         
     }
 

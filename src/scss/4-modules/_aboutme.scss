@@ -1,0 +1,23 @@
+.aboutme{
+    .content{
+        position: relative;
+        .border-top-left{
+            display: inline-block;
+            position: absolute;
+            background: transparent;
+            width: 110px;
+            height: 110px;
+            border-top: 3px solid $blue;
+            border-left: 3px solid$blue;
+            left: 20px;
+            top: 10px;
+            z-index: 0;
+        }
+        .main{
+            padding:20px 0px !important;
+           
+            width:85%;
+        }
+    }
+    
+}
