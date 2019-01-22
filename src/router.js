@@ -39,13 +39,7 @@ export default new Router({
           name:"contact",
           component:()=> import('./views/home/contact')
         }
-      ],
-    }
-    ,
-     {
-      path:"/editor",
-      name:"editor",
-      component:()=> import("@/views/editor")
+      ]
     }
   ]
 })

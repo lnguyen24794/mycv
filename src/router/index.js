@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/views/Home'
-import Posts from '@/views/admin/posts/Index'
+import Home from '@/components/Home'
+import Posts from '@/components/admin/posts/Index'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -22,7 +22,7 @@ export default new Router({
       path:'/admin',
       name:'admin',
       children:[
-
+       
       ]
     },
     {
@@ -34,7 +34,6 @@ export default new Router({
       path:"/posts/add",
       name:"admin_posts_add",
       component:Posts
-    },
-
+    }
   ]
 })
