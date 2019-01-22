@@ -1,7 +1,8 @@
-.aboutme{
-    .content{
+.aboutme {
+    .content {
         position: relative;
-        .border-top-left{
+
+        .border-top-left {
             display: inline-block;
             position: absolute;
             background: transparent;
@@ -13,11 +14,129 @@
             top: 10px;
             z-index: 0;
         }
-        .main{
-            padding:20px 0px !important;
-           
-            width:85%;
+
+        .main {
+
+            padding: 20px 0px !important;
+            width: 85%;
+
+            .wrap {
+
+                /* Shine */
+                .shine figure {
+                    position: relative;
+                    margin: 0px !important;
+                    box-sizing: border-box;
+                    padding: 1em 30px;
+
+                    img {
+                        max-height:335px;
+                        max-width: 335px;
+                        width: 100%;
+                    }
+                }
+
+                .shine figure::before {
+                    position: absolute;
+                    top: 0;
+                    left: -75%;
+                    z-index: 2;
+                    display: block;
+                    content: '';
+                    width: 50%;
+                    height: 100%;
+                    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+                    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+                    -webkit-transform: skewX(-25deg);
+                    transform: skewX(-25deg);
+                }
+
+                .shine figure:hover::before {
+                    -webkit-animation: shine .75s;
+                    animation: shine .75s;
+                }
+
+                @-webkit-keyframes shine {
+                    100% {
+                        left: 100%;
+                    }
+                }
+
+                @keyframes shine {
+                    100% {
+                        left: 50%;
+                    }
+                }
+
+                //end shine
+                //right start
+                .right {
+                    padding-left:20px;
+                    box-sizing: border-box;
+                    .info-list {
+                        list-style: none;
+                        padding:0px;
+                    }
+
+                    .info-list li:first-child {
+                        padding-top: 0;
+                    }
+
+                    li {
+                        padding: 5px 0;
+                        font-size: 14px;
+
+                        .title {
+                            display: inline-block;
+                            font-family: 'Oxygen', Helvetica, sans-serif;
+                            font-weight: 700;
+                            margin-right: 12px;
+                            color: #222;
+                            border-bottom: 2px solid $blue;
+                        }
+
+                        .value {
+                            font-family: 'PT Sans', Helvetica, sans-serif;
+                            min-width: 250px;
+                        }
+
+                        a {
+                            color: $blue;
+                            text-decoration: none;
+                        }
+                    }
+
+                    .social-links {
+                        display: block;
+                        list-style: none;
+                        margin: 25px 0 5px;
+                        padding: 0;
+                        text-align: left;
+
+                        li {
+                            display: inline-block;
+                            margin: 0;
+                            padding: 0;
+
+                            a {
+                                display: inline-block;
+                                margin: 0 1px;
+                                width: 34px;
+                                height: 34px;
+                                color: #555;
+                                background-color: transparent;
+                                border: 1px solid #e5e5e5;
+                                text-align: center;
+                                font-size: 16px;
+                                line-height: 32px;
+                               
+                            }
+                        }
+                    }
+                }
+
+            }
         }
     }
-    
+
 }
